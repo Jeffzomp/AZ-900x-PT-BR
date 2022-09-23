@@ -1,38 +1,38 @@
 ---
 wts:
-    title: '01 – Criar uma máquina virtual no portal (10 min)'
-    module: 'Módulo 02 – Principais serviços do Azure (cargas de trabalho)'
+  title: 01 – Criar uma máquina virtual no portal (10 min)
+  module: Module 02 - Core Azure Services (Workloads)
 ---
-# 01 – Criar uma máquina virtual no portal (10 min)
+# <a name="01---create-a-virtual-machine-in-the-portal-10-min"></a>01 – Criar uma máquina virtual no portal (10 min)
 
 Neste passo a passo, criaremos uma máquina virtual no portal do Azure, conectaremos à máquina virtual, instalaremos a função de servidor web e testaremos. 
 
-**Observação**: Reserve um tempo durante este passo a passo para clicar e ler os ícones informativos. 
+**Observação**: Reserve um tempo durante este passo a passo para selecionar e ler os ícones informativos. 
 
-# Tarefa 1: Criar a máquina virtual 
-1. Entre no portal do Azure **https://portal.azure.com**
+# <a name="task-1-create-the-virtual-machine"></a>Tarefa 1: Criar a máquina virtual 
+1. Entre no portal do Azure: **https://portal.azure.com**
 
-3. Na folha **Todos os serviços** no Menu do Portal, pesquise e selecione **Máquinas virtuais**, depois selecione **+Adicionar, +Criar, +Novo** e escolha **+Máquina virtual** no menu suspenso.
+3. Na folha **Todos os serviços** no Menu do Portal, pesquise e selecione **Máquinas virtuais**, clique em **+Criar** e escolha **+Máquina virtual do Azure** no menu suspenso.
 
 4. Na guia **Básico**, preencha as seguintes informações (mantenha os padrões para todo o resto):
 
     | Configurações | Valores |
     |  -- | -- |
-    | Assinatura | **Usar a padrão fornecida** |
-    | Grupo de recursos | **Criar novo grupo de recursos** |
+    | Subscription | **Use a padrão fornecida** |
+    | Resource group | **Criar grupo de recursos** |
     | Nome da máquina virtual | **myVM** |
     | Região | **(EUA) Leste dos EUA**|
     | Opções de disponibilidade | Nenhuma opção de redundância de infraestrutura exigida|
-    | Imagem | **Windows Server 2019 Datacenter – Gen2**|
+    | Image | **Datacenter do Windows Server 2019 – Gen2**|
     | Tamanho | **Standard D2s v3**|
     | Nome de usuário da conta de administrador | **azureuser** |
     | Senha da conta de administrador (digite com atenção!) | **Pa$$w0rd1234**|
-    | Regras da porta de entrada - | **Permitir portas selecionadas**|
-    | Selecionar portas de entrada | **RDP (3389)** e **HTTP (80)**| 
+    | Regras da porta de entrada - | **Permitir portas selecionadas **|
+    | Selecione as portas de entrada | **RDP (3389)** e **HTTP (80)**| 
 
 5. Passe para a guia Rede para verificar se **HTTP (80) e RDP (3389)** estão selecionadas na seção **Selecionar portas de entrada**.
 
-6. Passe para a guia Gerenciamento e, na seção **Monitoramento**, selecione a seguinte configuração:
+6. Alterne para a guia Gerenciamento e, em sua seção **Monitoring**, selecione a seguinte configuração:
 
     | Configurações | Valores |
     | -- | -- |
@@ -40,11 +40,11 @@ Neste passo a passo, criaremos uma máquina virtual no portal do Azure, conectar
 
 7. Mantenha os valores restantes padrão e selecione **Revisar + criar** na parte inferior da página.
 
-8. Assim que a validação for aprovada, clique no botão **Criar**. Pode levar de cinco a sete minutos para implantar a máquina virtual.
+8. Once Validation is passed click the <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> button. It can take anywhere from five to seven minutes to deploy the virtual machine.
 
 9. Você vai receber atualizações na página de implantação e por meio da área de **Notificações** (ícone de sino na barra de menu superior).
 
-# Tarefa 2: Conectar-se à máquina virtual
+# <a name="task-2-connect-to-the-virtual-machine"></a>Tarefa 2: Conectar-se à máquina virtual
 
 Nesta tarefa, vamos nos conectar à nova máquina virtual usando RDP (Protocolo de Área de Trabalho Remota). 
 
@@ -56,9 +56,9 @@ Nesta tarefa, vamos nos conectar à nova máquina virtual usando RDP (Protocolo 
 
     ![Captura de tela das propriedades da máquina virtual com o botão Conectar destacado.](../images/0101.png)
 
-    **Observação**: As instruções a seguir mostram como se conectar à VM desde um computador Windows. Em um Mac, você precisa de um cliente RDP, como este Remote Desktop Client da Mac App Store; em um computador Linux, você pode usar um cliente RDP de software livre.
+    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The following directions tell you how to connect to your VM from a Windows computer. On a Mac, you need an RDP client such as this Remote Desktop Client from the Mac App Store and on a Linux computer you can use an open source RDP client.
 
-2. Na página **Conectar à máquina virtual**, mantenha as opções padrão para se conectar ao endereço IP público na porta 3389 e selecione **Baixar Arquivo RDP**. O arquivo será baixado e aparecerá no canto inferior esquerdo da tela.
+2. On the <bpt id="p1">**</bpt>Connect to virtual machine<ept id="p1">**</ept> page, keep the default options to connect with the public IP address over port 3389 and click <bpt id="p2">**</bpt>Download RDP File<ept id="p2">**</ept>. A file will download on the bottom left of your screen.
 
 3. **Abra** o arquivo RDP baixado (no canto inferior esquerdo da máquina do laboratório) e selecione **Conectar** quando solicitado. 
 
@@ -66,13 +66,13 @@ Nesta tarefa, vamos nos conectar à nova máquina virtual usando RDP (Protocolo 
 
 4. Na janela **Segurança do Windows**, entre usando as Credenciais de Administrador usadas ao criar a VM **azureuser** e a senha **Pa$$w0rd1234**. 
 
-5. Você pode receber um aviso de certificação durante o processo de logon. Clique em **Sim** para criar a conexão e se conectar à VM implantada. Você deve se conectar com sucesso.
+5. You may receive a warning certificate during the sign-in process. Click <bpt id="p1">**</bpt>Yes<ept id="p1">**</ept> or to create the connection and connect to your deployed VM. You should connect successfully.
 
     ![Captura de tela do diálogo de aviso de Certificado informando ao usuário sobre um certificado não confiável, com o botão Sim destacado. ](../images/0104.png)
 
-A nova Máquina Virtual (myVM) será iniciada no Laboratório. Feche o Gerenciador do Servidor e a janela pop-up aberta (selecione o “X” no canto superior direito). Deve ser exibido o plano de fundo da sua máquina virtual. **Parabéns!** Você implantou e se conectou à Máquina Virtual executando o Windows Server. 
+A new Virtual Machine (myVM) will launch inside your Lab. Close the Server Manager and dashboard windows that pop up (click "x" at top right). You should see the blue background of your virtual machine. <bpt id="p1">**</bpt>Congratulations!<ept id="p1">**</ept> You have deployed and connected to a Virtual Machine running Windows Server. 
 
-# Tarefa 3: Instalar a função de servidor Web e testar
+# <a name="task-3-install-the-web-server-role-and-test"></a>Tarefa 3: Instalar a função de servidor Web e testar
 
 Nesta tarefa, instale a função de Servidor Web no servidor da máquina virtual recém-criada e verifique se a página de boas-vindas padrão do IIS é exibida. 
 
@@ -80,13 +80,13 @@ Nesta tarefa, instale a função de Servidor Web no servidor da máquina virtual
 
     ![Captura de tela da área de trabalho da máquina virtual com o botão Iniciar clicado e o PowerShell selecionado com Executar como administrador destacado.](../images/0105.png)
 
-2. No PowerShell, instale o recurso **Web-Server** na máquina virtual executando o seguinte comando: (Cole o comando e pressione ENTER para que a instalação comece).
+2. In PowerShell, install the <bpt id="p1">**</bpt>Web-Server<ept id="p1">**</ept> feature on the virtual machine by running the following command. (Paste in the command and hit ENTER for the installment to begin).
 
     ```PowerShell
     Install-WindowsFeature -name Web-Server -IncludeManagementTools
     ```
   
-3. Quando concluído, um prompt vai aparecer informando o **Êxito**, com valor **True**. Você não precisa reiniciar a máquina virtual para concluir a instalação. Feche a conexão do RDP à VM selecionando o **x** na barra azul no centro superior da máquina virtual. Você também pode minimizar selecionando **-** na barra azul na parte superior central.
+3. When completed, a prompt will state <bpt id="p1">**</bpt>Success<ept id="p1">**</ept> with a value <bpt id="p2">**</bpt>True<ept id="p2">**</ept>. You do not need to restart the virtual machine to complete the installation. Close the RDP connection to the VM by clicking the <bpt id="p1">**</bpt>x<ept id="p1">**</ept> on the blue bar at the top center of your virtual machine. You can also minimize it by clicking the <bpt id="p1">**</bpt><ph id="ph1">-</ph><ept id="p1">**</ept> on the blue bar at the top center.
 
     ![Captura de tela do prompt de comando do Windows PowerShell com o comando Install-WindowsFeature -name Web-Server -IncludeManagementTools concluído com êxito e saída informando que foi bem-sucedido.](../images/0106.png)
 
@@ -98,7 +98,7 @@ Nesta tarefa, instale a função de Servidor Web no servidor da máquina virtual
 
     ![Captura de tela da página de boas-vindas do servidor Web do IIS padrão sendo acessada por meio do endereço IP público em um navegador Web.](../images/0108.png)
 
-**Parabéns!** Você criou uma VM executando um servidor Web acessível por meio do endereço IP público. Se você tivesse um aplicativo Web para hospedar, poderia implantar arquivos de aplicativo na máquina virtual e hospedá-los para acesso público na máquina virtual implantada.
+<bpt id="p1">**</bpt>Congratulations!<ept id="p1">**</ept> You have created a new VM running a web server that is accessible via its public IP address. If you had a web application to host, you could deploy application files to the virtual machine and host them for public access on the deployed virtual machine.
 
 
-**Observação**: Para evitar custos adicionais, você tem a opção de remover este grupo de recursos. Procure grupos de recursos, clique em seu grupo de recursos e, em seguida, clique em **Excluir grupo de recursos**. Verifique o nome do grupo de recursos e clique em **Excluir**. Monitore as **Notificações** para ver como a exclusão está ocorrendo.
+<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see verify that the deletion completed successfully. 

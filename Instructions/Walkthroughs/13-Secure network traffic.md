@@ -1,13 +1,13 @@
 ---
 wts:
-    title: '13 – Tráfego de rede seguro (10 min)'
-    module: 'Módulo 04: Descreva a segurança geral e os recursos de segurança da rede'
+  title: 13 – Tráfego de rede seguro (10 min)
+  module: 'Module 04: Describe general security and network security features'
 ---
-# 13 – Tráfego de rede seguro (10 min)
+# <a name="13---secure-network-traffic-10-min"></a>13 – Tráfego de rede seguro (10 min)
 
 Neste passo a passo, configuraremos um grupo de segurança de rede.
 
-# Tarefa 1: Criar uma máquina virtual
+# <a name="task-1-create-a-virtual-machine"></a>Tarefa 1: Criar uma máquina virtual
 
 Nesta tarefa, criaremos uma máquina virtual Windows Server 2019 Datacenter. 
 
@@ -19,23 +19,23 @@ Nesta tarefa, criaremos uma máquina virtual Windows Server 2019 Datacenter.
 
     | Configurações | Valores |
     |  -- | -- |
-    | Assinatura | **Use a padrão** |
-    | Grupo de recursos | **Criar novo grupo de recursos** |
+    | Subscription | **Use o padrão fornecido** |
+    | Resource group | **Criar grupo de recursos** |
     | Nome da máquina virtual | **SimpleWinVM** |
     | Região | **(EUA) Leste dos EUA**|
-    | Imagem | **Windows Server 2019 Datacenter Gen 2**|
+    | Image | **Windows Server 2019 Datacenter Gen 2**|
     | Tamanho | **Standard D2s v3**|
     | Nome de usuário da conta de administrador | **azureuser** |
     | Senha da conta de administrador | **Pa$$w0rd1234**|
-    | Regras da porta de entrada | **Nenhum**|
+    | Regras de porta de entrada | **Nenhuma**|
 
 4. Alterne para a guia **Rede** e defina as seguintes configurações:
 
     | Configurações | Valores |
     | -- | -- |
-    | Grupo de segurança de rede NIC | **Nenhum**|
+    | Grupo de segurança de rede da NIC | **Nenhuma**|
 
-5. Alterne para a guia **Gerenciamento** e, em sua seção **Monitoramento**, selecione a seguinte configuração:
+5. Passe para a guia **Gerenciamento** e, na seção **Monitoramento**, selecione a seguinte configuração:
 
     | Configurações | Valores |
     | -- | -- |
@@ -43,19 +43,19 @@ Nesta tarefa, criaremos uma máquina virtual Windows Server 2019 Datacenter.
 
 6. Mantenha os padrões restantes e clique no botão **Revisar + criar** na parte inferior da página.
 
-7. Assim que a validação for aprovada, clique no botão **Criar**. Pode levar cerca de cinco minutos para implantar a máquina virtual.
+7. Once Validation is passed click the <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> button. It can take about five minutes to deploy the virtual machine.
 
-8. Monitore a implantação. Pode levar alguns minutos para que o grupo de recursos e a máquina virtual sejam criados. 
+8. Monitor the deployment. It may take a few minutes for the resource group and virtual machine to be created. 
 
 9. Na folha de implantação ou na área de Notificação, clique em **Ir para o recurso**. 
 
 10. Na folha da máquina virtual **SimpleWinVM**, clique em **Rede**, revise a guia **Regras de porta de entrada+** e observe que não há grupo de segurança de rede associado ao adaptador de rede da máquina virtual ou sub-rede à qual o adaptador de rede está conectado.
 
-    **Observação**: Identifique o nome do adaptador de rede. Você precisará disso na próxima tarefa.
+    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Identify the name of the network interface. You will need it in the next task.
 
-# Tarefa 2: Criar um grupo de segurança de rede
+# <a name="task-2-create-a-network-security-group"></a>Tarefa 2: Criar um 	Grupo de Segurança de Rede
 
-Nesta tarefa, criaremos um grupo de segurança de rede e o associaremos ao adaptador de rede.
+Nesta tarefa, criaremos um grupo de segurança de rede e o associaremos ao adaptador de rede. 
 
 1. Na folha **Todos os serviços**, procure e selecione **Grupos de segurança de rede** e, em seguida, selecione **+ Adicionar, + Criar, + Novo**
 
@@ -63,8 +63,8 @@ Nesta tarefa, criaremos um grupo de segurança de rede e o associaremos ao adapt
 
     | Configuração | Valor |
     | -- | -- |
-    | Assinatura | **Use a assinatura padrão** |
-    | Grupo de recursos | **Selecionar o padrão na lista suspensa** |
+    | Subscription | **Use a assinatura padrão** |
+    | Resource group | **Selecionar o padrão na lista suspensa** |
     | Nome | **myNSGSecure** |
     | Região | **(EUA) Leste dos EUA**  |
 
@@ -72,11 +72,11 @@ Nesta tarefa, criaremos um grupo de segurança de rede e o associaremos ao adapt
 
 4. Depois que o NSG for criado, clique em **Ir para o recurso**.
 
-5. Em **Configurações**, clique em **Adaptadores de rede** e em **Associar**.
+5. Em **Configurações**, clique em **Adaptadores de rede** e em ** Associar**.
 
 6. Selecione o adaptador de rede que você identificou na tarefa anterior. 
 
-# Tarefa 3: Configurar uma regra de porta de segurança de entrada para permitir o RDP
+# <a name="task-3-configure-an-inbound-security-port-rule-to-allow-rdp"></a>Tarefa 3: Configurar uma regra de porta de segurança de entrada para permitir o RDP
 
 Nesta tarefa, vamos permitir o tráfego do RDP para a máquina virtual configurando uma regra de porta de segurança de entrada. 
 
@@ -84,18 +84,18 @@ Nesta tarefa, vamos permitir o tráfego do RDP para a máquina virtual configura
 
 2. No painel **Visão geral**, clique em **Conectar**.
 
-3. Tente se conectar à máquina virtual: selecione o RDP, baixe e execute o arquivo RDP. Por padrão, o grupo de segurança de rede não permite RDP. Feche a janela de erro. 
+3. Attempt to connect to the virtual machine by selecting RDP and downloading an running the RDP file. By default the network security group does not allow RDP. Close the error window. 
 
 
     ![Captura de tela da mensagem de erro informando que a conexão com a máquina virtual falhou.](../images/1201.png)
 
-4. Na folha da máquina virtual, role para baixo até a seção **Configurações**. Selecione **Rede** e observe as regras de entrada para o grupo de segurança de rede **myNSGSecure (conectado ao adaptador de rede: myVMNic)**. Ele nega todo tráfego de entrada, exceto o tráfego dentro da rede virtual e as investigações do balanceador de carga.
+4. Na folha da máquina virtual, role para baixo até a seção **Configurações**. Selecione **Rede** e observe as regras de entrada para o grupo de segurança de rede **myNSGSecure (conectado ao adaptador de rede: myVMNic)** . Ele nega todo tráfego de entrada, exceto o tráfego dentro da rede virtual e as investigações do balanceador de carga.
 
-5. Na guia **Regras de porta de entrada**, clique em **Adicionar regra de porta de entrada**. Clique em **Adicionar** quando terminar. 
+5. On the <bpt id="p1">**</bpt>Inbound port rules<ept id="p1">**</ept> tab, click <bpt id="p2">**</bpt>Add inbound port rule<ept id="p2">**</ept> . Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> when you are done. 
 
     | Configuração | Valor |
     | -- | -- |
-    | Fonte | **Qualquer um**|
+    | Fonte | **Qualquer**|
     | Intervalos de portas de origem | **\*** |
     | Destino | **Qualquer** |
     | Intervalos de portas de destino | **3389** |
@@ -104,9 +104,9 @@ Nesta tarefa, vamos permitir o tráfego do RDP para a máquina virtual configura
     | Prioridade | **300** |
     | Nome | **AllowRDP** |
 
-6. Selecione **Adicionar** e espere a regra ser provisionada. Tente conectar de novo o RDP à máquina virtual voltando a **Conectar**. Desta vez, você deve ter êxito. Lembre-se de que o usuário é **azureuser** e a senha é **Pa$$w0rd1234**.
+6. Select <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> and wait for the rule to be provisioned and then try again to RDP into the virtual machine by going back to <bpt id="p2">**</bpt>Connect<ept id="p2">**</ept> This time you should be successful. Remember the user is <bpt id="p1">**</bpt>azureuser<ept id="p1">**</ept> and the password is <bpt id="p2">**</bpt>Pa$$w0rd1234<ept id="p2">**</ept>.
 
-# Tarefa 4: Configurar uma regra de porta de segurança de saída para negar o acesso à Internet
+# <a name="task-4-configure-an-outbound-security-port-rule-to-deny-internet-access"></a>Tarefa 4: Configurar uma regra de porta de segurança de saída para negar o acesso à Internet
 
 Nesta tarefa, criaremos uma regra de porta de saída do NSG que negará o acesso à Internet e, em seguida, testaremos para garantir que a regra está funcionando.
 
@@ -114,7 +114,7 @@ Nesta tarefa, criaremos uma regra de porta de saída do NSG que negará o acesso
 
 2. Depois que a máquina iniciar, abra um navegador **Internet Explorer**. 
 
-3. Verifique se você pode acessar **https://www.bing.com** e, em seguida, feche o Internet Explorer. Você precisará trabalhar com os pop-ups de segurança aprimorada do IE. 
+3. Verify that you can access <bpt id="p1">**</bpt><ph id="ph1">https://www.bing.com</ph><ept id="p1">**</ept> and then close Internet Explorer. You will need to work through the IE enhanced security pop-ups. 
 
     **Observação**: Agora vamos configurar uma regra para negar o acesso de saída à Internet. 
 
@@ -122,24 +122,24 @@ Nesta tarefa, criaremos uma regra de porta de saída do NSG que negará o acesso
 
 5. Em **Configurações**, clique em **Rede** e em **Regras de porta de saída**.
 
-6. Observe que há uma regra, **AllowInternetOutbound**. Esta é uma regra padrão e não pode ser removida. 
+6. Notice there is a rule, <bpt id="p1">**</bpt>AllowInternetOutbound<ept id="p1">**</ept>. This a default rule and cannot be removed. 
 
-7. Clique em **Adicionar regra de porta de saída** à direita do grupo de segurança de rede **myNSGSecure (conectado à interface de rede: myVMNic)** e configure uma nova rega de segurança de saída com uma prioridade mais alta que negará o tráfego da Internet. Clique em **Adicionar** quando terminar. 
+7. Click <bpt id="p1">**</bpt>Add outbound port rule<ept id="p1">**</ept> to the right of the <bpt id="p2">**</bpt>myNSGSecure  (attached to network interface: myVMNic)<ept id="p2">**</ept> network security group and configure a new outbound security rule with a higher priority that will deny internet traffic. Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> when you are finished. 
 
     | Configuração | Valor |
     | -- | -- |
-    | Fonte | **Qualquer um**|
+    | Fonte | **Qualquer**|
     | Intervalos de portas de origem | **\*** |
-    | Destino | **Marca de Serviço** |
+    | Destino | **Marca de serviço** |
     | Marca de serviço de destino | **Internet** |
     | Intervalos de portas de destino | **\*** |
     | Protocolo | **TCP** |
-    | Ação | **Negar** |
+    | Ação | **Deny** |
     | Prioridade | **4000** |
     | Nome | **DenyInternet** |
 
 8. Selecione **Adicionar** Devolva os RDPs à VM. 
 
-9. Navegue para **https://www.microsoft.com**. A página não deve ser exibida. Pode ser necessário trabalhar com pop-ups adicionais de segurança aprimorada do Internet Explorer.  
+9. Browse to <bpt id="p1">**</bpt><ph id="ph1">https://www.microsoft.com</ph><ept id="p1">**</ept>. The page should not display. You may need to work through additional IE enhanced security pop-ups.  
 
-**Observação**: Para evitar custos adicionais, você tem a opção de remover este grupo de recursos. Procure grupos de recursos, clique em seu grupo de recursos e, em seguida, clique em **Excluir grupo de recursos**. Verifique o nome do grupo de recursos e clique em **Excluir**. Monitore as **Notificações** para ver como a exclusão está ocorrendo.
+<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
