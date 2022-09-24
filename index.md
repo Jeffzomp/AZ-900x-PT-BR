@@ -6,7 +6,7 @@ layout: home
 
 # <a name="content-directory"></a>Diretório de conteúdo
 
-Hiperlinks para cada um dos tutoriais. Os instrutores podem optar por usar o passo a passo como uma demonstração ou um laboratório do aluno. 
+Hyperlinks to each of the walkthroughs. Instructors may choose to use the walkthrough as a demonstration or a student lab. 
 
 ## <a name="walkthroughs"></a>Passo a passo
 
