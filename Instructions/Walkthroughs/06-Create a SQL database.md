@@ -57,22 +57,22 @@ Nesta tarefa, criaremos um banco de dados SQL baseado no banco de dados de exemp
 
     ![Captura de tela da guia Configurações adicionais da folha Criar Banco de Dados SQL com as configurações selecionadas de acordo com a tabela e com o botão Revisar + criar realçado.](../images/0501c.png)
 
-7. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> and then click <bpt id="p2">**</bpt>Create<ept id="p2">**</ept> to deploy and provision the resource group, server, and database. It can take approx. 2 to 5 minutes to deploy.
+7. Clique em **Revisar + criar** e selecione **Criar** para implantar e provisionar o grupo de recursos, o servidor e o banco de dados. Pode demorar aprox. 2 a 5 minutos para implantar.
 
 
 # <a name="task-2-test-the-database"></a>Tarefa 2: Testar o banco de dados.
 
 Nesta tarefa, vamos configurar o SQL Server e executar uma consulta SQL. 
 
-1. When the deployment has completed, click Go to resource from the deployment blade. Alternatively, from the <bpt id="p1">**</bpt>All Resources<ept id="p1">**</ept> blade, search and select <bpt id="p2">**</bpt>Databases<ept id="p2">**</ept>, then <bpt id="p3">**</bpt>SQL databases<ept id="p3">**</ept> ensure your new database was created. You may need to <bpt id="p1">**</bpt>Refresh<ept id="p1">**</ept> the page.
+1. Quando a implantação for concluída, selecione Ir para o recurso na folha de implantação. Se preferir, na folha **Todos os serviços**, procure e selecione **Bancos de Dados** e depois **Bancos de dados SQL**; verifique se o novo banco de dados foi criado. Talvez seja necessário **Atualizar** a página.
 
     ![Captura de tela do banco de dados SQL e do servidor que acabam de ser implantados.](../images/0502.png)
 
-2. Click the <bpt id="p1">**</bpt>db1<ept id="p1">**</ept> entry representing the SQL database you created. On the db1 blade click <bpt id="p1">**</bpt>Query editor (preview)<ept id="p1">**</ept>.
+2. Selecione a entrada **db1** representando o banco de dados SQL criado. Na folha db1, selecione **Editor de Consultas (pré-visualização)** .
 
 3. Faça logon como **sqluser** com a senha **Pa$$w0rd1234**.
 
-4. You will not be able to login. Read the error closely and make note of the IP address that needs to be allowed through the firewall. 
+4. Você não conseguirá fazer logon. Leia o erro com atenção e anote o endereço IP que precisa receber permissão para atravessar o firewall. 
 
     ![Captura de tela da página de logon do Editor de Consultas com erro de endereço IP.](../images/0503.png)
 
@@ -82,13 +82,13 @@ Nesta tarefa, vamos configurar o SQL Server e executar uma consulta SQL.
 
 6. Na folha **Visão geral** do db1, selecione **Definir firewall do servidor** no centro superior da tela.
 
-7. Click <bpt id="p1">**</bpt>+ Add client IP<ept id="p1">**</ept> (top menu bar) to add the IP address referenced in the error. (it may have autofilled for you - if not paste it into the IP address fields). Be sure to <bpt id="p1">**</bpt>Save<ept id="p1">**</ept> your changes. 
+7. Selecione **+ Adicionar IP do cliente** (barra de menu superior) para adicionar o endereço IP mencionado no erro. (ele deve ser preenchido automaticamente; caso não seja, cole-o nos campos do endereço IP). Não se esqueça de **Salvar** suas alterações. 
 
     ![Captura de tela da página de configurações do firewall do SQL Server com a nova regra de IP realçada.](../images/0506.png)
 
-8. Return to your SQL database (slide the bottom toggle bar to the left) and click on <bpt id="p1">**</bpt>Query Editor (Preview)<ept id="p1">**</ept>. Try to login again as <bpt id="p1">**</bpt>sqluser<ept id="p1">**</ept> with the password <bpt id="p2">**</bpt>Pa$$w0rd1234<ept id="p2">**</ept>. This time you should succeed. Note that it may take a couple of minutes for the new firewall rule to be deployed. 
+8. Volte ao banco de dados SQL (deslizar para a esquerda na barra de alternância na parte inferior) e selecione **Editor de Consultas (Pré-visualização)** . Tente fazer logon como **sqluser** com a senha **Pa$$w0rd1234**. Desta vez, você deve conseguir. Observe que pode demorar alguns minutos para que a nova regra de firewall seja implantada. 
 
-9. Once you log in successfully, the query pane appears. Enter the following query into the editor pane. 
+9. Quando entrar, o painel de consulta será exibido. Insira a consulta a seguir no painel do editor. 
 
     ```SQL
     SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName
@@ -99,10 +99,10 @@ Nesta tarefa, vamos configurar o SQL Server e executar uma consulta SQL.
 
     ![Captura de tela do Editor de Consultas com o painel consultas e os comandos sendo executados com êxito.](../images/0507.png)
 
-10. Click <bpt id="p1">**</bpt>Run<ept id="p1">**</ept>, and then review the query results in the <bpt id="p2">**</bpt>Results<ept id="p2">**</ept> pane. The query should run successfully.
+10. Clique em **Executar** e examine os resultados da consulta no painel **Resultados**. A consulta deve ser executada com êxito.
 
     ![Captura de tela do painel do Editor de Consultas do banco de dados com o código SQL executado com êxito e a saída visível no painel de resultados.](../images/0508.png)
 
-Congratulations! You have created a SQL database in Azure and successfully queried the data in that database.
+Parabéns! Você criou um banco de dados SQL no Azure e consultou com êxito os dados contidos nele.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Observação**: Para evitar custos adicionais, você tem a opção de remover este grupo de recursos. Procure grupos de recursos, clique em seu grupo de recursos e, em seguida, clique em **Excluir grupo de recursos**. Verifique o nome do grupo de recursos e clique em **Excluir**. Monitore as **Notificações** para ver como a exclusão está ocorrendo.

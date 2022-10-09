@@ -8,7 +8,7 @@ wts:
 
 Neste passo a passo, você usará a calculadora do custo total de propriedade (TCO) para gerar um relatório de comparação de custos para um ambiente local.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This walkthrough provides example definitions of on-premises infrastructure and workloads for a typical datacenter. To create a TCO Calculator report, use the example definitions or provide details of your <bpt id="p1">*</bpt>actual<ept id="p1">*</ept> on-premises infrastructure and workloads.
+**Observação**: Este passo a passo fornece definições de exemplo de infraestrutura local e cargas de trabalho para um datacenter típico. Para criar um relatório da Calculadora do TCO, use as definições de exemplo ou forneça detalhes de sua infraestrutura local e cargas de trabalho *reais*.
 
 # <a name="task-1-configure-the-tco-calculator"></a>Tarefa 1: Configurar a calculadora de TCO
 
@@ -88,6 +88,6 @@ Nesta tarefa, revisaremos as recomendações de redução de custos e faremos o 
 
 3. Para salvar ou imprimir uma cópia em PDF do relatório, clique em **Baixar**.
 
-    ![Screenshot of the report pane of the tco calculator in Azure. The highlighted and completed input fields indicates how set the tco calculator timeframe to three years and the region to north europe. A graph shows the cost of on-premises infrastructure and workloads off-set against the reduced cost of using Azure.](../images/2001.png)
+    ![Captura de tela do painel de relatório da calculadora do TCO no Azure. Os campos de entrada destacados e preenchidos indicam como definir o prazo da calculadora do TCO para três anos e a região para o Norte da Europa. Um grafo mostra o custo da infraestrutura local e o deslocamento das cargas de trabalho em relação ao custo reduzido de uso do Azure.](../images/2001.png)
 
-Congratulations! You have used the TCO Calculator to generate a cost comparison report for an on-premises environment.
+Parabéns! Você usou a Calculadora do TCO para gerar um relatório de comparação de custos para um ambiente local.

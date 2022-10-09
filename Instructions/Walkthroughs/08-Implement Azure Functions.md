@@ -33,7 +33,7 @@ Nesta tarefa, criaremos um aplicativo de funções.
 
 5. Aguarde a notificação de que o recurso foi criado.
 
-6. When the deployment has completed, click Go to resource from the deployment blade. Alternatively, navigate back to the <bpt id="p1">**</bpt>Function App<ept id="p1">**</ept> blade, click <bpt id="p2">**</bpt>Refresh<ept id="p2">**</ept> and verify that the newly created function app has the <bpt id="p3">**</bpt>Running<ept id="p3">**</ept> status. 
+6. Quando a implantação for concluída, selecione Ir para o recurso na folha de implantação. Se preferir, navegue de volta para a folha **Aplicativo de Funções**, selecione **Atualizar** e verifique se o status do aplicativo de funções recém-criado é **Em execução**. 
 
     ![Captura de tela da página Aplicativo de Funções com o novo aplicativo de Funções.](../images/0701.png)
 
@@ -45,25 +45,25 @@ Nesta tarefa, usaremos a função Webhook + API para exibir uma mensagem quando 
 
 2. Na folha do aplicativo de funções, na seção **Funções**, clique em **Funções** e depois em **+ Adicionar, + Criar, + Novo**.
 
-    ![Screenshot of the choose a development environment step in the azure functions for dot net getting started pane inside Azure portal. The display elements for creating a new in-portal function are highlighted. The highlighted elements are expand the function app, add new function, in-portal, and the continue button.](../images/0702.png)
+    ![Captura de tela da etapa de escolha de um ambiente de desenvolvimento nas funções do Azure para o painel de introdução dot net dentro do portal do Azure. Os elementos de exibição para a criação de uma nova função no portal são destacados. Os elementos destacados são: expandir o aplicativo de funções, adicionar nova função, no portal e o botão continuar.](../images/0702.png)
 
-3. An <bpt id="p1">**</bpt>Add function<ept id="p1">**</ept> pop-up window will appear on the right. In the <bpt id="p1">**</bpt>Select a template<ept id="p1">**</ept> section click <bpt id="p2">**</bpt>HTTP trigger<ept id="p2">**</ept>. Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> 
+3. Uma janela pop-up para **Adicionar função** será exibida à direita. Na seção **Selecionar modelo**, escolha **Gatilho HTTP**. Clique em **Adicionar** 
 
-    ![Screenshot of the create a function step in the azure functions for dot net getting started pane inside Azure portal. The HTTP trigger card is highlighted to illustrate the display elements used to add a new webhook to an Azure function.](../images/0702a.png)
+    ![Captura de tela da etapa de criar uma função nas funções do Azure para o painel de introdução dot net dentro do portal do Azure. O cartão do gatilho HTTP está destacado para ilustrar os elementos de exibição usados para adicionar um novo webhook a uma função do Azure.](../images/0702a.png)
 
 4. Na folha **HttpTrigger1**, na seção **Desenvolvedor**, clique em **Código + Teste**. 
 
-5. On the <bpt id="p1">**</bpt>Code + Test<ept id="p1">**</ept> blade, review the auto-generated code and note that the code is designed to run an HTTP request and log information. Also, notice the function returns a Hello message with a name. 
+5. Na folha **Código + Teste**, analise o código gerado automaticamente e observe que ele foi desenvolvido para executar uma solicitação HTTP e registrar informações. Além disso, observe que a função responde com uma mensagem de Olá, com um nome. 
 
-    ![Screenshot of the function code. The Hello message is hightlighted.](../images/0704.png)
+    ![Captura de tela do código da função. A mensagem Olá aparece destacada.](../images/0704.png)
 
 6. Clique em **Obter URL de função** na seção superior do editor de função. 
 
 7. Certifique-se de que o valor na lista suspensa **Chave** esteja definido como **padrão** e clique em **Copiar** para copiar o URL da função. 
 
-    ![Screenshot of the get function URL pane inside the function editor in Azure portal. The display elements get function URL button, set key dropdown, and copy URL button are highlighted to indicate how to obtain and copy the function URL from the function editor.](../images/0705.png)
+    ![Captura de tela do painel obter URL de função dentro do editor de funções no portal do Azure. Os elementos de exibição – o botão Obter URL de função; o menu suspenso Definir chave e o botão Copiar URL – são destacados para indicar como obter e copiar o URL de função do editor de função.](../images/0705.png)
 
-8. Open a new browser tab and paste the copied function URL into your web browser's address bar. When the page is requested the function will run. Notice the returned message stating that the function requires a name in the request body.
+8. Abra uma nova guia do navegador e cole o URL da função copiado na barra de endereços do seu navegador Web. Quando a página for solicitada, a função será executada. Observe a mensagem retornada informando que a função requer um nome no corpo da solicitação.
 
     ![Captura de tela da mensagem Forneça um nome.](../images/0706.png)
 
@@ -71,12 +71,12 @@ Nesta tarefa, usaremos a função Webhook + API para exibir uma mensagem quando 
 
     **Observação**: Por exemplo, se o seu nome for Cindy, o URL final será semelhante a: `https://azfuncxxx.azurewebsites.net/api/HttpTrigger1?code=X9xx9999xXXXXX9x9xxxXX==&name=cindy`
 
-    ![Screenshot of a highlighted function URL and an appended example user name in the address bar of a web browser. The hello message and user name are also highlighted to illustrate the output of the function in the main browser window.](../images/0707.png)
+    ![Captura de tela de um URL de função destacado e um nome de usuário de amostra anexado na barra de endereços de um navegador Web. A mensagem Olá e o nome de usuário também são destacados para ilustrar a saída da função na janela principal do navegador.](../images/0707.png)
 
-10. When you hit enter, your function runs and every invocation is traced. To view the traces, return to the Portal <bpt id="p1">**</bpt>HttpTrigger1 <ph id="ph1">\|</ph> Code + Test<ept id="p1">**</ept> blade and click <bpt id="p2">**</bpt>Monitor<ept id="p2">**</ept>. You can <bpt id="p1">**</bpt>configure<ept id="p1">**</ept> Application Insights by selecting the timestamp and click <bpt id="p2">**</bpt>Run query in Application Insights<ept id="p2">**</ept>.
+10. Ao pressionar o enter, sua função é executada e todas as invocações são rastreadas. Para exibir os rastreamentos, retorne para a folha Portal **HttpTrigger1 \| Código + Teste** e clique em **Monitorar**. Você pode **configurar** o Application Insights selecionando o carimbo de data/hora e clicando em **Executar consulta no Application Insights**.
 
     ![Captura de tela de um log de informações de rastreamento resultante da execução da função dentro do editor de funções no portal do Azure.](../images/0709.png) 
 
-Congratulations! You have created a Function App to display a Hello message when there is an HTTP request.  
+Parabéns! Você criou um aplicativo de funções para exibir uma mensagem Olá quando houver uma solicitação HTTP.  
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Observação**: Para evitar custos adicionais, você tem a opção de remover este grupo de recursos. Procure grupos de recursos, clique em seu grupo de recursos e, em seguida, clique em **Excluir grupo de recursos**. Verifique o nome do grupo de recursos e clique em **Excluir**. Monitore as **Notificações** para ver como a exclusão está ocorrendo.

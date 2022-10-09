@@ -19,7 +19,7 @@ Nesta tarefa, vamos configurar o Cloud Shell e usar a CLI do Azure para criar um
    
 3. Na caixa de diálogo Bem-vindo ao Azure Cloud Shell, quando for solicitado para selecionar **Bash** ou **PowerShell**, selecione **Bash**. 
 
-4. A new window will open stating <bpt id="p1">**</bpt>You have no storage mounted<ept id="p1">**</ept>. Select <bpt id="p1">**</bpt>advanced settings<ept id="p1">**</ept>.
+4. Uma nova janela será aberta dizendo **Não há armazenamentos montados**. Selecione **configurações avançadas**.
 
 5. Na tela de configurações avançadas, preencha os campos a seguir e depois selecione Criar Armazenamento:
     - Grupo de Recursos: **Criar grupo de recursos**
@@ -42,7 +42,7 @@ Nesta tarefa, usaremos a CLI do Azure para criar um grupo de recursos e uma máq
     az group list --output table
     ```
 
-4. In Cloud Shell enter the command below and make sure that each line, except for the last one, is followed by the backslash (<ph id="ph1">`\`</ph>) character. If you type the whole command on the same line, do not use any backslash characters. 
+4. No Cloud Shell, insira o comando abaixo e verifique se cada linha, exceto a última, termina com o caractere de barra invertida (`\`). Se você digitar todo o comando na mesma linha, não use nenhum caractere de barra invertida. 
 
     ```cli
     az vm create \
@@ -56,7 +56,7 @@ Nesta tarefa, usaremos a CLI do Azure para criar um grupo de recursos e uma máq
 
     >**Observação**: Se você estiver usando a linha de comando em um computador Windows, substitua o caractere de barra invertida (`\`) pelo acento circunflexo (`^`).
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The command will take 2 to 3 minutes to complete. The command will create a virtual machine and various resources associated with it such as storage, networking and security resources. Do not continue to the next step until the virtual machine deployment is complete. 
+    **Observação**: O comando levará de 2 a 3 minutos para ser concluído. O comando criará uma máquina virtual e vários recursos associados a ela, como armazenamento, rede e recursos de segurança. Não passe para a próxima etapa até que a implantação da máquina virtual seja concluída. 
 
 5. Quando o comando terminar de ser executado, na janela do navegador, feche o painel do Cloud Shell.
 
@@ -73,19 +73,19 @@ Nesta tarefa, praticaremos a execução de comandos CLI do Cloud Shell.
 
 2. Certifique-se de que **Bash** esteja selecionado no menu suspenso superior esquerdo do painel do Cloud Shell.
 
-3. Retrieve information about the virtual machine you provisioned, including name, resource group, location, and status. Notice the PowerState is <bpt id="p1">**</bpt>running<ept id="p1">**</ept>.
+3. Recupere informações sobre a máquina virtual que você provisionou, incluindo nome, grupo de recursos, local e status. Observe que o PowerState está **em execução**.
 
     ```cli
     az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
     ```
 
-4. Stop the virtual machine. Notice the message that billing continues until the virtual machine is deallocated. 
+4. Parar a máquina virtual. Observe a mensagem de que a cobrança continua até que a máquina virtual seja desalocada. 
 
     ```cli
     az vm stop --resource-group myRGCLI --name myVMCLI
     ```
 
-5. Verify your virtual machine status. The PowerState should now be <bpt id="p1">**</bpt>stopped<ept id="p1">**</ept>.
+5. Verifique o status da sua máquina virtual. O PowerState agora deve ser **interrompido**.
 
     ```cli
     az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
@@ -99,7 +99,7 @@ Nesta tarefa, revisaremos as recomendações do Assistente do Azure.
 
 1. Na folha **Todos os serviços**, procure e selecione **Assistente**. 
 
-2. On the <bpt id="p1">**</bpt>Advisor<ept id="p1">**</ept> blade, select <bpt id="p2">**</bpt>Overview<ept id="p2">**</ept>. Notice recommendations are grouped by Reliability, Security, Performance, and Cost. 
+2. Na folha **Assistente**, selecione **Visão geral**. As recomendações de aviso são agrupadas por Confiabilidade, Segurança, Desempenho e Custo. 
 
     ![Captura de tela da página Visão geral do Assistente. ](../images/1103.png)
 
@@ -115,6 +115,6 @@ Nesta tarefa, revisaremos as recomendações do Assistente do Azure.
 
 6. Se você tiver tempo, continue experimentando a CLI do Azure. 
 
-Congratulations! You have configured Cloud Shell, created a virtual machine using Azure CLI, practiced with Azure CLI commands, and viewed Advisor recommendations.
+Parabéns! Você configurou o Cloud Shell, criou uma máquina virtual usando a CLI do Azure, praticou com os comandos da CLI do Azure e viu as recomendações do Assistente.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Observação**: Para evitar custos adicionais, você tem a opção de remover este grupo de recursos. Procure grupos de recursos, clique em seu grupo de recursos e, em seguida, clique em **Excluir grupo de recursos**. Verifique o nome do grupo de recursos e clique em **Excluir**. Monitore as **Notificações** para ver como a exclusão está ocorrendo.

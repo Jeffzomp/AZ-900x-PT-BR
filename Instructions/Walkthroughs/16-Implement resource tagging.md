@@ -19,16 +19,16 @@ Nesta tarefa, vamos configurar a política **Exigir uma marca nos recursos** e a
 
 4. Observe que o **Escopo** de nossa política abrange toda a assinatura. 
 
-5. Under <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> Select the <bpt id="p2">**</bpt>Policy definition<ept id="p2">**</ept> ellipsis button (right side of textbox). In the <bpt id="p1">**</bpt>Search<ept id="p1">**</ept> box, enter the value <bpt id="p2">**</bpt>tag<ept id="p2">**</ept>. A list of related Policies with the word <bpt id="p1">**</bpt>tag<ept id="p1">**</ept> will appear. Scroll down till you find the <bpt id="p1">**</bpt>Require a tag and its value on resources<ept id="p1">**</ept> definition, click on it and click <bpt id="p2">**</bpt>Select<ept id="p2">**</ept>.
+5. Em **Básico**, selecione o botão de reticências **Definição de política** (lado direito da caixa de texto). Na caixa **Pesquisar**, insira a **marca** de valor. Uma lista de políticas relacionadas com a palavra **marca** aparecerá. Role para baixo até encontrar a definição **Exigir uma marca e seu valor nos recursos**, clique nela e clique em **Selecionar**.
 
    ![image](https://user-images.githubusercontent.com/89808319/155607579-d564a43e-a9cd-443d-8482-f47879eff2e9.png)
    
-6.  On the <bpt id="p1">**</bpt>Parameters<ept id="p1">**</ept> tab, type in **Company : Contoso ** for the tag key/value pair name. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>, and then <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
+6.  Na guia **Parâmetros**, digite **Empresa: Contoso ** para o nome do par de chave/valor. Clique em **Revisar + criar** e, em seguida, em **Criar**.
 
   
 
-7. The <bpt id="p1">**</bpt>Require a tag amd its value on resources<ept id="p1">**</ept> policy assignment is now in place. When a resource is created, it must include a tag with the Company : Contoso key.
-   <bpt id="p1">**</bpt>Note - you need to wait up to 30 minutes for the Policy to be applied.<ept id="p1">**</ept> 
+7. A atribuição de política **Exigir uma marca e seu valor nos recursos** está em vigor. Quando um recurso é criado, ele deve incluir uma marca com a chave de Empresa: Contoso.
+   **Observação – você precisa esperar até 30 minutos para que a Política seja aplicada.** 
 
   ![image](https://user-images.githubusercontent.com/89808319/155607357-556646b6-9ca7-4817-a02e-643869b2c4dd.png)
 
@@ -38,7 +38,7 @@ Nesta tarefa, criaremos contas de armazenamento para testar a marcação necess�
 
 1. No portal do Azure, na folha **Todos os serviços**, procure e selecione **Contas de armazenamento** e, em seguida, selecione **+Adicionar +Nova +Criar**.
 
-2. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Create storage account<ept id="p2">**</ept> blade, fill in the following information (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the storage account with letters and digits such that the name is globally unique). Leave the defaults for everything else.
+2. Na guia **Básico** da folha **Criar conta de armazenamento**, preencha as seguintes informações (substitua **xxxx** no nome da conta de armazenamento por letras e dígitos de forma que o nome seja globalmente exclusivo). Mantenha os padrões para todo o resto.
 
     | Configuração | Valor | 
     | --- | --- |
@@ -49,34 +49,34 @@ Nesta tarefa, criaremos contas de armazenamento para testar a marcação necess�
 
 3. Clique em **Revisar + Criar**. 
 
-    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We are testing to see what happens when the tag is not supplied. Please note, it can take up to 30 minutes for Policies to take effect.
+    **Observação:** Estamos testando para ver o que acontece quando a marca não é fornecida. Pode levar até 30 minutos para as Políticas entrarem em vigor.
 
-4. You will receive a Validation failed message. Click the <bpt id="p1">**</bpt>Click here to view details<ept id="p1">**</ept> message. On the <bpt id="p1">**</bpt>Errors<ept id="p1">**</ept> blade, on the <bpt id="p2">**</bpt>Summary<ept id="p2">**</ept> tab note the error message stating that resource was disallowed by Policy.
+4. Você receberá uma mensagem de falha na validação. Clique na mensagem **Clique aqui para ver os detalhes**. Na folha **Erros**, na guia **Resumo**, observe a mensagem de erro informando que o recurso não foi permitido pela Política.
 
     **Observação:** Se você visualizar a guia Erro bruto, verá o nome da marca específico necessário. 
 
     ![Captura de tela de não permitida devido a um erro de política.](../images/1704.png)
 
 
-5. Close the <bpt id="p1">**</bpt>Error<ept id="p1">**</ept> pane and click <bpt id="p2">**</bpt>Previous<ept id="p2">**</ept> (bottom of the screen). Provide the tagging information. 
+5. Feche o painel **Erro** e clique em **Anterior** (parte inferior da tela). Forneça as informações de marcação. 
 
     | Configuração | Valor | 
     | --- | --- |
     | Nome da marca | **Empresa:Contoso** (pode não estar na lista suspensa) |
 
-6. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> and verify that the validation was successful. Click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> to deploy the storage account. 
+6. Clique em **Revisar + criar** e verifique se a validação foi bem-sucedida. Clique em **Criar** para implantar a conta de armazenamento. 
 
 # <a name="task-3-view-all-resources-with-a-specific-tag"></a>Tarefa 3: Veja todos os recursos com uma marca específica
 
 1. No portal do Azure, na folha **Todos os serviços**, procure e selecione **Marcas**.
 
-2. Note all tags and their values. Click the <bpt id="p1">**</bpt>Company : Contoso<ept id="p1">**</ept> key/value pair. This will display a blade showing the newly created storage account, as long as you included the tag during its deployment. 
+2. Observe todas as marcas e seus valores. Clique no par de chave/valor **Empresa: Contoso**. Isso exibirá uma folha mostrando a conta de armazenamento recém-criada, contanto que você tenha incluído a marca durante sua implantação. 
 
    ![Captura de tela das marcas com empresa e contoso selecionados.](../images/1705.png)
 
 3. No Portal, exiba a folha **Todos os recursos**.
 
-4. Click <bpt id="p1">**</bpt>Add filter<ept id="p1">**</ept> and add the <bpt id="p2">**</bpt>Company<ept id="p2">**</ept> tag key as the filter category. With the filter applied, only your storage account will be listed.
+4. Clique em **Adicionar filtro** e adicione a chave de marca da **Empresa** como a categoria do filtro. Com o filtro aplicado, apenas sua conta de armazenamento será listada.
 
     ![Captura de tela do filtro Todos os recursos com Empresa selecionada.](../images/1706.png)
 
@@ -94,7 +94,7 @@ Nesta tarefa, removeremos a política **Exigir uma marca nos recursos** para que
 
 5. Se você tiver tempo, crie outro recurso sem uma marca para garantir que a política não esteja mais em vigor.
 
-Em **Básico**, selecione o botão de reticências **Definição de política** (lado direito da caixa de texto).
+Parabéns! Neste passo a passo, criamos uma atribuição de política que exigiu marcação, criamos um recurso (conta de armazenamento) e testamos a Política para marcação, visualizamos recursos com uma marcação especificada e removemos a política de marcação.
 
 
-Na caixa **Pesquisar**, insira a **marca** de valor.
+**Observação**: Para evitar custos adicionais, você tem a opção de remover este grupo de recursos. Procure grupos de recursos, clique em seu grupo de recursos e, em seguida, clique em **Excluir grupo de recursos**. Verifique o nome do grupo de recursos e clique em **Excluir**. Monitore as **Notificações** para ver como a exclusão está ocorrendo.

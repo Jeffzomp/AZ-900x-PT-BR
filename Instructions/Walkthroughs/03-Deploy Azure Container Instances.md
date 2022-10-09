@@ -6,7 +6,7 @@ wts:
 
 # <a name="03---deploy-azure-container-instances-10-min"></a>03 – Implantar Instâncias de Contêiner do Azure (10 min)
 
-In this walkthrough we create, configure, and deploy a container by using Azure Container Instances (ACI) in the Azure Portal. The container is a Welcome to ACI web application that displays a static HTML page. 
+Neste passo a passo, vamos criar, configurar e implantar um contêiner do Docker usando as Instâncias de Contêiner do Azure (ACI) no Portal do Azure. O contêiner é um aplicativo Web de Bem-vindo à ACI que exibe uma página HTML estática. 
 
 # <a name="task-1-create-a-container-instance"></a>Tarefa 1: Criar uma instância de contêiner 
 
@@ -31,14 +31,14 @@ Nesta tarefa, criaremos uma nova instância de contêiner para o aplicativo Web.
     | Tamanho| ***Mantenha o padrão***|
 
 
-4. Configure the Networking tab (replace <bpt id="p1">**</bpt>xxxxx<ept id="p1">**</ept> with letters and digits such that the name is globally unique). Leave all other settings at their default values.
+4. Configure a guia Rede (substitua **xxxx** por letras e dígitos para que o nome seja globalmente exclusivo). Deixe todas as outras configurações com seus valores padrão.
 
     | Configuração| Valor|
     |--|--|
     | Rótulo do nome DNS| **mycontainerdnsxxxxx** |
 
     
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a <bpt id="p1">**</bpt>DNS name label not available<ept id="p1">**</ept> error message following the deployment, specify a different DNS name label (replacing the xxxxx) and re-deploy. 
+    **Observação**: Seu contêiner estará publicamente acessível em dns-name-label.region.azurecontainer.io. Se você receber uma mensagem de erro **Etiqueta do nome DNS indisponível** após a implantação, especifique uma etiqueta de nome DNS diferente (não use xxxx) e reimplante. 
 
 5. Clique em **Revisar e criar** para iniciar o processo de validação automática.
 
@@ -59,11 +59,11 @@ Nesta tarefa, verificamos se a instância de contêiner está em execução, gar
 
     ![Captura de tela do painel de visão geral do contêiner recém-criado no portal do Azure, com o FQDN destacado. ](../images/0202.png)
 
-2. Neste passo a passo, vamos criar, configurar e implantar um contêiner do Docker usando as Instâncias de Contêiner do Azure (ACI) no Portal do Azure. 
+2. Copie o FQDN do contêiner em uma nova guia do navegador Web e pressione **Enter**. A página de boas-vindas deve ser exibida. 
 
     ![Captura de tela da mensagem de boas-vindas da ACI exibida em um navegador Web.](../images/0203.png)
 
 
-O contêiner é um aplicativo Web de Bem-vindo à ACI que exibe uma página HTML estática.
+**Parabéns!** Você usou o Portal do Azure para implantar, com êxito, um aplicativo em contêiner nas Instâncias de Contêiner do Azure.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**Observação**: Para evitar custos adicionais, você tem a opção de remover este grupo de recursos. Procure grupos de recursos, clique em seu grupo de recursos e, em seguida, clique em **Excluir grupo de recursos**. Verifique o nome do grupo de recursos e clique em **Excluir**. Monitore as **Notificações** para ver como a exclusão está ocorrendo.
